@@ -32,14 +32,14 @@ kotlin {
 
 tasks.withType(Jar::class) {
     manifest {
-        attributes["Name"] = "Your Patches"
-        attributes["Description"] = "Patches for ReVanced."
+        attributes["Name"] = "Twitter Patches"
+        attributes["Description"] = "Patches for Twitter."
         attributes["Version"] = version
         attributes["Timestamp"] = System.currentTimeMillis().toString()
-        attributes["Source"] = "git@github.com:you/revanced-patches.git"
-        attributes["Author"] = "You"
-        attributes["Contact"] = "contact@your.homepage"
-        attributes["Origin"] = "https://your.homepage"
+        attributes["Source"] = "git@github.com:IndusAryan/twitter-patches.git"
+        attributes["Author"] = "IndusAryan"
+        attributes["Contact"] = "null"
+        attributes["Origin"] = "https://revanced.app"
         attributes["License"] = "GNU General Public License v3.0"
     }
 }
@@ -82,9 +82,9 @@ publishing {
             from(components["java"])
 
             pom {
-                name = "Your Patches"
-                description = "Patches for ReVanced."
-                url = "https://your.homepage"
+                name = "Twitter Patches"
+                description = "Patches for Twitter."
+                url = "https://null.app"
 
                 licenses {
                     license {
@@ -94,15 +94,15 @@ publishing {
                 }
                 developers {
                     developer {
-                        id = "Your ID"
-                        name = "Your Name"
-                        email = "contact@your.homepage"
+                        id = "IndusAryan"
+                        name = "IndusAryan"
+                        email = "contact@null.app"
                     }
                 }
                 scm {
-                    connection = "scm:git:git://github.com/you/revanced-patches.git"
-                    developerConnection = "scm:git:git@github.com:you/revanced-patches.git"
-                    url = "https://github.com/you/revanced-patches"
+                    connection = "scm:git:git://github.com/IndusAryan/twitter-patches.git"
+                    developerConnection = "scm:git:git@github.com:IndusAryan/twitter-patches.git"
+                    url = "https://github.com/IndusAryan/twitter-patches"
                 }
             }
         }
