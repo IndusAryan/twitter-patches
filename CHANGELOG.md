@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/IndusAryan/twitter-patches/compare/v1.1.0...v1.1.1) (2024-01-31)
+
+
+### Bug Fixes
+
+* **twitter:** duplicate patches ([532929c](https://github.com/IndusAryan/twitter-patches/commit/532929c822c4c95e9e5eb27feb9492bb7ca8efe6))
+
 # [1.1.0](https://github.com/IndusAryan/twitter-patches/compare/v1.0.0...v1.1.0) (2024-01-31)
 
 
