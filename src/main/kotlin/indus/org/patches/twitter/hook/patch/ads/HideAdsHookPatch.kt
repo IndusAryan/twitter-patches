@@ -6,11 +6,10 @@ import indus.org.patches.twitter.hook.json.JsonHookPatch
 import indus.org.patches.twitter.hook.patch.BaseHookPatch
 
 @Patch(
-    name = "Hide recommended users",
+    name = "Hide ads",
+    description = "Hides ads.",
     dependencies = [JsonHookPatch::class],
     compatiblePackages = [CompatiblePackage("com.twitter.android")]
 )
 @Suppress("unused")
-object HideRecommendedUsersPatch : BaseHookPatch(
-    "Lapp/revanced/integrations/twitter/patches/hook/patch/recommendation/RecommendedUsersHook;"
-)
+object HideAdsHookPatch : BaseHookPatch("Lapp/revanced/integrations/twitter/patches/hook/patch/ads/AdsHook;")
