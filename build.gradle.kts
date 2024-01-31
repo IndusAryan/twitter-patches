@@ -5,7 +5,7 @@ plugins {
     `maven-publish`
 }
 
-group = "your.org"
+group = "indus.org"
 
 repositories {
     mavenCentral()
