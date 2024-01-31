@@ -1,9 +1,9 @@
-package indus.org.patches.twitter.ads
+package indus.org.patches.twitter.hook.patch.ads
 
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
-import indus.org.patches.twitter.json.JsonHookPatch
-import indus.org.patches.twitter.recommendation.BaseHookPatch
+import indus.org.patches.twitter.hook.json.JsonHookPatch
+import indus.org.patches.twitter.hook.patch.BaseHookPatch
 
 @Patch(
     name = "Hide recommended users",

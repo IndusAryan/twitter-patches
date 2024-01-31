@@ -1,4 +1,4 @@
-package indus.org.patches.twitter.json
+package indus.org.patches.twitter.hook.json
 
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
