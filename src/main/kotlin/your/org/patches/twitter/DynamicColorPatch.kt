@@ -1,4 +1,4 @@
-package your.org.patches.example
+package your.org.patches.twitter
 
 import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.PatchException
