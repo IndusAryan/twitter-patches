@@ -1,3 +1,10 @@
+# 1.0.0 (2024-01-31)
+
+
+### Features
+
+* **twitter:** app wide material theme (replaces dim) ([b1446d2](https://github.com/IndusAryan/twitter-patches/commit/b1446d2a39b50e796d022a0a852fd188cc1ac94c))
+
 # [1.0.0-dev.2](https://github.com/IndusAryan/twitter-patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2024-01-31)
 
 
