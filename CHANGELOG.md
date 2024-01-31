@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/IndusAryan/twitter-patches/compare/v1.1.1...v1.1.2) (2024-01-31)
+
+
+### Bug Fixes
+
+* **twitter:** bruh - have a good sleep ([8b04a04](https://github.com/IndusAryan/twitter-patches/commit/8b04a040cf464b7ee5e477a44c9af0e54acf472d))
+
 ## [1.1.1](https://github.com/IndusAryan/twitter-patches/compare/v1.1.0...v1.1.1) (2024-01-31)
 
 
