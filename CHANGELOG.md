@@ -1,3 +1,10 @@
+# [1.0.0-dev.3](https://github.com/IndusAryan/twitter-patches/compare/v1.0.0-dev.2...v1.0.0-dev.3) (2024-01-31)
+
+
+### Features
+
+* **twitter:** grey theme(replaces lightsout), og app name ([94e38ac](https://github.com/IndusAryan/twitter-patches/commit/94e38ac5b03b2dfc8f7c4ce9cc1dae0436a26e54))
+
 # [1.0.0-dev.2](https://github.com/IndusAryan/twitter-patches/compare/v1.0.0-dev.1...v1.0.0-dev.2) (2024-01-31)
 
 
