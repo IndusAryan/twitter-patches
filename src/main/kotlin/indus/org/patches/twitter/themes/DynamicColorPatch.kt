@@ -1,4 +1,4 @@
-package your.org.patches.twitter
+package indus.org.patches.twitter.themes
 
 import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.PatchException
@@ -10,7 +10,7 @@ import java.nio.file.Files
 
 @Patch(
     name = "Dynamic color",
-    description = "Replaces the default X (Twitter) Blue signature theme with the user's Material You palette.",
+    description = "Replaces the default Twitter (X) Blue signature theme with the user's Material You palette.",
     compatiblePackages = [CompatiblePackage("com.twitter.android")]
 )
 @Suppress("unused")

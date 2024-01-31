@@ -1,4 +1,4 @@
-package your.org.patches.twitter
+package indus.org.patches.twitter.themes
 
 import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.PatchException
