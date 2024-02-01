@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/IndusAryan/twitter-patches/compare/v1.1.2...v1.1.3) (2024-02-01)
+
+
+### Bug Fixes
+
+* **twitter:** bruh - at least verify before push lmao ([4417950](https://github.com/IndusAryan/twitter-patches/commit/4417950749cff247df6581c2b251eade96e94e8f))
+
 ## [1.1.2](https://github.com/IndusAryan/twitter-patches/compare/v1.1.1...v1.1.2) (2024-01-31)
 
 
