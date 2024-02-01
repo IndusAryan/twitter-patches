@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/IndusAryan/twitter-patches/compare/v1.1.3...v1.1.4) (2024-02-01)
+
+
+### Bug Fixes
+
+* **twitter:** try to fix shades of grey patch ([8ccaafb](https://github.com/IndusAryan/twitter-patches/commit/8ccaafb8c8e9f6c7cb12df3fbbf4c1bc278948aa))
+
 ## [1.1.3](https://github.com/IndusAryan/twitter-patches/compare/v1.1.2...v1.1.3) (2024-02-01)
 
 
