@@ -1,4 +1,4 @@
-package app.revanced.patches.twitter.misc.hook.json.fingerprints
+package indus.org.patches.twitter.hook.json.fingerprints
 
 import app.revanced.patcher.fingerprint.MethodFingerprint
 
