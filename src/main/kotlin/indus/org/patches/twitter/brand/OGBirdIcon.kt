@@ -5,6 +5,7 @@ import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
+import indus.org.utils.copyRawIcons
 import java.io.File
 import java.nio.file.Files
 
@@ -17,11 +18,15 @@ import java.nio.file.Files
     object OGBirdIcon : ResourcePatch() {
 
         override fun execute(context: ResourceContext) {
-
-            val customIconFile = File("src/main/resources/raw/ic_launcher_twitter.webp")
+            val iconFiles = arrayOf(
+                File("src/main/resources/raw/ic_launcher_twitter.webp"),
+                File("src/main/resources/raw/ic_launcher_twitter_round.webp"),
+                File("src/main/resources/raw/ic_launcher_twitter_monochrome.webp")
+            )
+            /*val customIconFile = File("src/main/resources/raw/ic_launcher_twitter.webp")
             val customIconRoundFile = File("src/main/resources/raw/ic_launcher_twitter_round.webp")
             val customIconMonochromeFile = File("src/main/resources/raw/ic_launcher_twitter_monochrome.webp")
-
+*/
         val resDirectory = context["res"]
         if (!resDirectory.isDirectory) throw PatchException("The res folder can not be found.")
 
@@ -30,10 +35,11 @@ import java.nio.file.Files
         if (!drawableDirectory.isDirectory) Files.createDirectories(drawableDirectory.toPath())
 
         // Copy our icons to res/drawable
-        copyFile(customIconFile, drawableDirectory.resolve("ic_launcher_twitter.webp"))
+            context.copyRawIcons(*iconFiles)
+        /*copyFile(customIconFile, drawableDirectory.resolve("ic_launcher_twitter.webp"))
         copyFile(customIconRoundFile, drawableDirectory.resolve("ic_launcher_twitter_round.webp"))
         copyFile(customIconMonochromeFile, drawableDirectory.resolve("ic_launcher_twitter_monochrome.webp"))
-
+*/
         val mipmapDirectory = resDirectory.resolve("mipmap-anydpi")
         val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
         val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
