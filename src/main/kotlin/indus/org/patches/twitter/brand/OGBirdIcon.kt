@@ -1,13 +1,9 @@
 package indus.org.patches.twitter.brand
 
 import app.revanced.patcher.data.ResourceContext
-import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
-import indus.org.utils.copyRawIcons
-import java.io.File
-import java.nio.file.Files
 
 @Patch(
     name = "White Bird icon",
@@ -15,75 +11,58 @@ import java.nio.file.Files
     compatiblePackages = [CompatiblePackage("com.twitter.android")]
 )
 @Suppress("unused")
-    object OGBirdIcon : ResourcePatch() {
+object OGBirdIcon {
+
+    object TwitterIconPatch : ResourcePatch() {
 
         override fun execute(context: ResourceContext) {
-            val iconFiles = arrayOf(
-                File("src/main/resources/raw/ic_launcher_twitter.webp"),
-                File("src/main/resources/raw/ic_launcher_twitter_round.webp"),
-                File("src/main/resources/raw/ic_launcher_twitter_monochrome.webp")
-            )
-            /*val customIconFile = File("src/main/resources/raw/ic_launcher_twitter.webp")
-            val customIconRoundFile = File("src/main/resources/raw/ic_launcher_twitter_round.webp")
-            val customIconMonochromeFile = File("src/main/resources/raw/ic_launcher_twitter_monochrome.webp")
-*/
-        val resDirectory = context["res"]
-        if (!resDirectory.isDirectory) throw PatchException("The res folder can not be found.")
 
-        val drawableDirectory = resDirectory.resolve("drawable")
+            // Modify the fill color in avatar_marker_twitter.xml
+            context.xmlEditor["res/drawable/avatar_marker_twitter.xml"].use { editor ->
+                val document = editor.file
 
-        if (!drawableDirectory.isDirectory) Files.createDirectories(drawableDirectory.toPath())
+                val vector = document.getElementsByTagName("vector").item(0)
+                val path = vector?.childNodes?.item(1)
 
-        // Copy our icons to res/drawable
-            context.copyRawIcons(*iconFiles)
-        /*copyFile(customIconFile, drawableDirectory.resolve("ic_launcher_twitter.webp"))
-        copyFile(customIconRoundFile, drawableDirectory.resolve("ic_launcher_twitter_round.webp"))
-        copyFile(customIconMonochromeFile, drawableDirectory.resolve("ic_launcher_twitter_monochrome.webp"))
-*/
-        val mipmapDirectory = resDirectory.resolve("mipmap-anydpi")
-        val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
-        val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
+                if (path != null && path.nodeName == "path") {
+                    path.attributes.getNamedItem("fillColor")?.nodeValue = "#ff0f1419"
+                }
+            }
 
-        // Modify the ic_launcher_twitter.xml and $round
-        modifyIcLauncherTwitterXml(icLauncherTwitterXml)
-        modifyIcLauncherTwitterRoundXml(icLauncherTwitterRoundXml)
-    }
+            // Update ic_launcher_twitter.xml and ic_launcher_twitter_round.xml
+            val mipmapDirectory = context["res"].resolve("mipmap-anydpi")
+            val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
+            val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
 
-    // copy drawables
-    private fun copyFile(source: File, destination: File) {
-        destination.outputStream().use { output ->
-            source.inputStream().use { input ->
-                input.copyTo(output)
+            // Update ic_launcher_twitter.xml
+            context.xmlEditor["$icLauncherTwitterXml"].use { editor ->
+                val content = icLauncherTwitterXml.readText()
+
+                val modifiedContent = content.replace(
+                    """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
+                    """android:drawable="@drawable/ic_launcher_twitter""""
+                ).replace(
+                    """android:drawable="@drawable/ic_launcher_twitter_foreground"""",
+                    """android:drawable="@drawable/ic_launcher_twitter_monochrome""""
+                )
+
+                icLauncherTwitterXml.writeText(modifiedContent)
+            }
+
+            // Update ic_launcher_twitter_round.xml
+            context.xmlEditor["$icLauncherTwitterRoundXml"].use { editor ->
+                val content = icLauncherTwitterRoundXml.readText()
+
+                val modifiedContent = content.replace(
+                    """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
+                    """android:drawable="@drawable/ic_launcher_twitter_round""""
+                ).replace(
+                    """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
+                    """android:drawable="@drawable/ic_launcher_twitter_monochrome""""
+                )
+
+                icLauncherTwitterRoundXml.writeText(modifiedContent)
             }
         }
-    }
-
-    // function to modify the ic_launcher_twitter.xml and ic_launcher_twitter_round.xml
-    private fun modifyIcLauncherTwitterXml(xmlFile: File) {
-        val content = xmlFile.readText()
-
-        val modifiedContent = content.replace(
-            """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
-            """android:drawable="@drawable/ic_launcher_twitter""""
-        ).replace(
-            """android:drawable="@drawable/ic_launcher_twitter_foreground"""",
-            """android:drawable="@drawable/ic_launcher_twitter_monochrome""""
-        )
-
-        xmlFile.writeText(modifiedContent)
-    }
-
-    private fun modifyIcLauncherTwitterRoundXml(xmlFile: File) {
-        val content = xmlFile.readText()
-
-        val modifiedContent = content.replace(
-        """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
-        """android:drawable="@drawable/ic_launcher_twitter_round""""
-        ).replace(
-            """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
-            """android:drawable="@drawable/ic_launcher_twitter_monochrome""""
-        )
-
-        xmlFile.writeText(modifiedContent)
     }
 }
