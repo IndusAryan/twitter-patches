@@ -6,7 +6,6 @@ import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import java.io.File
-import java.io.FileOutputStream
 import java.nio.file.Files
 
 @Patch(
@@ -15,13 +14,13 @@ import java.nio.file.Files
     compatiblePackages = [CompatiblePackage("com.twitter.android")]
 )
 @Suppress("unused")
-object OGBirdIcon : ResourcePatch() {
+    object OGBirdIcon : ResourcePatch() {
 
-    override fun execute(context: ResourceContext) {
+        override fun execute(context: ResourceContext) {
 
-        val customIconFile = File("resources/raw/ic_launcher_twitter.webp")
-        val customIconRoundFile = File("resources/raw/ic_launcher_twitter_round.webp")
-        val customIconMonochromeFile = File("resources/raw/ic_launcher_twitter_monochrome.webp")
+            val customIconFile = File("raw/ic_launcher_twitter.webp")
+            val customIconRoundFile = File("raw/ic_launcher_twitter_round.webp")
+            val customIconMonochromeFile = File("raw/ic_launcher_twitter_monochrome.webp")
 
         val resDirectory = context["res"]
         if (!resDirectory.isDirectory) throw PatchException("The res folder can not be found.")
