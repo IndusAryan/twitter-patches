@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/IndusAryan/twitter-patches/compare/v1.2.3...v1.2.4) (2024-02-02)
+
+
+### Bug Fixes
+
+* **twitter:** damn! ([71a4cfb](https://github.com/IndusAryan/twitter-patches/commit/71a4cfba1c134c03418ca7ffc39942aa38158e34))
+
 ## [1.2.3](https://github.com/IndusAryan/twitter-patches/compare/v1.2.2...v1.2.3) (2024-02-02)
 
 
