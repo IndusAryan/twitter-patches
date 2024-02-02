@@ -18,9 +18,9 @@ import java.nio.file.Files
 
         override fun execute(context: ResourceContext) {
 
-            val customIconFile = File("raw/ic_launcher_twitter.webp")
-            val customIconRoundFile = File("raw/ic_launcher_twitter_round.webp")
-            val customIconMonochromeFile = File("raw/ic_launcher_twitter_monochrome.webp")
+            val customIconFile = File("src/main/resources/raw/ic_launcher_twitter.webp")
+            val customIconRoundFile = File("src/main/resources/raw/ic_launcher_twitter_round.webp")
+            val customIconMonochromeFile = File("src/main/resources/raw/ic_launcher_twitter_monochrome.webp")
 
         val resDirectory = context["res"]
         if (!resDirectory.isDirectory) throw PatchException("The res folder can not be found.")
