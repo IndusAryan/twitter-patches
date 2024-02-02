@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/IndusAryan/twitter-patches/compare/v1.2.2...v1.2.3) (2024-02-02)
+
+
+### Bug Fixes
+
+* **twitter:** 3rd attempt to fix icon patch lol ([1ac478b](https://github.com/IndusAryan/twitter-patches/commit/1ac478ba6b2a33710d2a08edc08058cbb48c7235))
+
 ## [1.2.2](https://github.com/IndusAryan/twitter-patches/compare/v1.2.1...v1.2.2) (2024-02-02)
 
 
