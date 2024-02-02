@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/IndusAryan/twitter-patches/compare/v1.1.4...v1.2.0) (2024-02-02)
+
+
+### Features
+
+* **twitter:** icon patch to replace X with white bird ([c935b87](https://github.com/IndusAryan/twitter-patches/commit/c935b8754d90f4da37f19c83f4423296107a1f35))
+
 ## [1.1.4](https://github.com/IndusAryan/twitter-patches/compare/v1.1.3...v1.1.4) (2024-02-01)
 
 
