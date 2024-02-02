@@ -1,9 +1,12 @@
 package indus.org.patches.twitter.brand
 
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
+import java.io.File
+import java.nio.file.Files
 
 @Patch(
     name = "White Bird icon",
@@ -13,53 +16,48 @@ import app.revanced.patcher.patch.annotation.Patch
 @Suppress("unused")
 object OGBirdIcon : ResourcePatch() {
 
-        override fun execute(context: ResourceContext) {
+    override fun execute(context: ResourceContext) {
+        // Update avatar_marker_twitter.xml
+        updateAvatarMarkerTwitterXml(context)
 
-            // Modify the fill color in avatar_marker_twitter.xml
-            context.xmlEditor["res/drawable/avatar_marker_twitter.xml"].use { editor ->
-                val document = editor.file
+        // Update ic_launcher_twitter.xml and ic_launcher_twitter_round.xml
+        updateLauncherXmlFiles(context)
+    }
 
-                val vector = document.getElementsByTagName("vector").item(0)
-                val path = vector?.childNodes?.item(1)
+    private fun updateAvatarMarkerTwitterXml(context: ResourceContext) {
+        val avatarMarkerTwitterFile = context["res/drawable/avatar_marker_twitter.xml"]
+        if (!avatarMarkerTwitterFile.isFile) throw PatchException("avatar_marker_twitter.xml file not found.")
 
-                if (path != null && path.nodeName == "path") {
-                    path.attributes.getNamedItem("fillColor")?.nodeValue = "#ff0f1419"
-                }
-            }
+        val content = avatarMarkerTwitterFile.readText()
+        val modifiedContent = content.replace(
+            """android:fillColor="#ff2aa4f1"""",
+            """android:fillColor="#ff0f1419""""
+        )
 
-            // Update ic_launcher_twitter.xml and ic_launcher_twitter_round.xml
-            val mipmapDirectory = context["res"].resolve("mipmap-anydpi")
-            val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
-            val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
+        avatarMarkerTwitterFile.writeText(modifiedContent)
+    }
 
-            // Update ic_launcher_twitter.xml
-            context.xmlEditor["$icLauncherTwitterXml"].use { editor ->
-                val content = icLauncherTwitterXml.readText()
+    private fun updateLauncherXmlFiles(context: ResourceContext) {
+        val mipmapDirectory = context["res"].resolve("mipmap-anydpi")
+        val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
+        val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
 
-                val modifiedContent = content.replace(
-                    """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
-                    """android:drawable="@drawable/ic_launcher_twitter""""
-                ).replace(
-                    """android:drawable="@drawable/ic_launcher_twitter_foreground"""",
-                    """android:drawable="@drawable/ic_launcher_twitter_monochrome""""
-                )
+        // Update ic_launcher_twitter.xml
+        updateXmlFile(icLauncherTwitterXml)
 
-                icLauncherTwitterXml.writeText(modifiedContent)
-            }
+        // Update ic_launcher_twitter_round.xml
+        updateXmlFile(icLauncherTwitterRoundXml)
+    }
 
-            // Update ic_launcher_twitter_round.xml
-            context.xmlEditor["$icLauncherTwitterRoundXml"].use { editor ->
-                val content = icLauncherTwitterRoundXml.readText()
+    private fun updateXmlFile(xmlFile: File) {
+        if (!Files.isRegularFile(xmlFile.toPath())) throw PatchException("$xmlFile not found.")
 
-                val modifiedContent = content.replace(
-                    """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
-                    """android:drawable="@drawable/ic_launcher_twitter_round""""
-                ).replace(
-                    """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
-                    """android:drawable="@drawable/ic_launcher_twitter_monochrome""""
-                )
+        val content = xmlFile.readText()
+        val modifiedContent = content.replace(
+            """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
+            """android:drawable="@drawable/avatar_marker_twitter""""
+        )
 
-                icLauncherTwitterRoundXml.writeText(modifiedContent)
-            }
-        }
+        xmlFile.writeText(modifiedContent)
+    }
 }
