@@ -62,5 +62,4 @@ object OGBirdIcon : ResourcePatch() {
                 icLauncherTwitterRoundXml.writeText(modifiedContent)
             }
         }
-    }
 }
