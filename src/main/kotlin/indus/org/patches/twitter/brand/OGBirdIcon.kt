@@ -11,9 +11,7 @@ import app.revanced.patcher.patch.annotation.Patch
     compatiblePackages = [CompatiblePackage("com.twitter.android")]
 )
 @Suppress("unused")
-object OGBirdIcon {
-
-    object TwitterIconPatch : ResourcePatch() {
+object OGBirdIcon : ResourcePatch() {
 
         override fun execute(context: ResourceContext) {
 
