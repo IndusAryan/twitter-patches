@@ -1,3 +1,10 @@
+## [1.2.7](https://github.com/IndusAryan/twitter-patches/compare/v1.2.6...v1.2.7) (2024-02-02)
+
+
+### Bug Fixes
+
+* **twitter:** dont laugh please ([fab5845](https://github.com/IndusAryan/twitter-patches/commit/fab5845438dabb6e8ca57bc78b6e66d108d26489))
+
 ## [1.2.6](https://github.com/IndusAryan/twitter-patches/compare/v1.2.5...v1.2.6) (2024-02-02)
 
 
