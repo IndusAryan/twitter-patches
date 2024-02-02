@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/IndusAryan/twitter-patches/compare/v1.2.4...v1.2.5) (2024-02-02)
+
+
+### Bug Fixes
+
+* **twitter:** lets try this ([38829f5](https://github.com/IndusAryan/twitter-patches/commit/38829f5c60a1b69dc725b51214ef3f6b28ff4454))
+
 ## [1.2.4](https://github.com/IndusAryan/twitter-patches/compare/v1.2.3...v1.2.4) (2024-02-02)
 
 
