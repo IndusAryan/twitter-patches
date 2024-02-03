@@ -27,6 +27,7 @@ object OGTwitterBrand : ResourcePatch() {
             appNameAttribute.textContent = "Twitter"
 
         }
+        updateStrings(context)
     }
 
     private fun updateStrings(context: ResourceContext) {
