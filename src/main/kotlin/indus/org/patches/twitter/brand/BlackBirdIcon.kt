@@ -26,7 +26,7 @@ object BlackBirdIcon : ResourcePatch() {
         updateAvatarMarkerTwitterXml(context)
         updateLauncherXmlFiles(context)
         XMLUtils.updateXVector(context)
-        SplashScreenHelper().changeSplashScreen(context)
+        //SplashScreenHelper().changeSplashScreen(context)
     }
 
     private fun updateAvatarMarkerTwitterXml(context: ResourceContext) {
