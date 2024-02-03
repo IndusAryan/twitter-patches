@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/IndusAryan/twitter-patches/compare/v1.2.7...v1.3.0) (2024-02-03)
+
+
+### Features
+
+* **twitter:** blue bird icon and improved branding ([20acb9f](https://github.com/IndusAryan/twitter-patches/commit/20acb9f60a28feff7e18f7a54927e5facc49dbd8))
+
 ## [1.2.7](https://github.com/IndusAryan/twitter-patches/compare/v1.2.6...v1.2.7) (2024-02-02)
 
 
