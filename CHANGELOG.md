@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/IndusAryan/twitter-patches/compare/v1.3.0...v1.4.0) (2024-02-03)
+
+
+### Features
+
+* **twitter:** first good beta version! ([b550c2e](https://github.com/IndusAryan/twitter-patches/commit/b550c2e134be7702b2e011116749d4240c9c4ea0))
+
 # [1.3.0](https://github.com/IndusAryan/twitter-patches/compare/v1.2.7...v1.3.0) (2024-02-03)
 
 
