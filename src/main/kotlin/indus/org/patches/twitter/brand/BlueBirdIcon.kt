@@ -87,11 +87,11 @@ object BlueBirdIcon : ResourcePatch() {
         avatarMarkerTwitterFile.writeText(newAvatarMarkerTwitterContent)
     }
 
-    fun updateXVector(context: ResourceContext) {
+    private fun updateXVector(context: ResourceContext) {
             val vectorFile = context["res/drawable/ic_vector_twitter_white.xml"]
             vectorFile.writeText(newBirdVectorWhite)
 
-            val vectorFileDark = context["res/drawable/ic_vector_twitter_white.xml"]
+            val vectorFileDark = context["res/drawable/ic_vector_twitter.xml"]
             vectorFileDark.writeText(newBirdVector)
     }
 
