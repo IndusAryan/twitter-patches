@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/IndusAryan/twitter-patches/compare/v1.6.0...v1.7.0) (2024-02-03)
+
+
+### Features
+
+* **twitter:** lets go! ([2c200d5](https://github.com/IndusAryan/twitter-patches/commit/2c200d536bf7aa62e85d6a7302b1093df6e0e330))
+
 # [1.6.0](https://github.com/IndusAryan/twitter-patches/compare/v1.5.0...v1.6.0) (2024-02-03)
 
 
