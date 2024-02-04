@@ -1,3 +1,10 @@
+# [1.10.0-dev.4](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.3...v1.10.0-dev.4) (2024-02-04)
+
+
+### Bug Fixes
+
+* **twitter:** improvise og twitter brand patch ([de0a399](https://github.com/IndusAryan/twitter-patches/commit/de0a39948d3e4b59085001aa1f189783ac098420))
+
 # [1.10.0-dev.3](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.2...v1.10.0-dev.3) (2024-02-04)
 
 
