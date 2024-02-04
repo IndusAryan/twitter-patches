@@ -65,7 +65,7 @@ object XMLUtils {
         """
 
     private val ogBirdVectorWhite = """
-         <?xml version='1.0' encoding='utf-8' ?>
+        <?xml version='1.0' encoding='utf-8' ?>
         <vector android:height="24.0dp"
                 android:width="24.0dp"
                 android:viewportWidth="24.0"
@@ -76,7 +76,7 @@ object XMLUtils {
     """.trimIndent()
 
      private val ogBirdVector = """
-            <?xml version='1.0' encoding='utf-8' ?>
+        <?xml version='1.0' encoding='utf-8' ?>
         <vector android:height="24.0dp"
                 android:width="24.0dp"
                 android:viewportWidth="24.0"
@@ -87,13 +87,10 @@ object XMLUtils {
     """.trimIndent()
 
     fun updateXVector(context: ResourceContext) {
-        val newBirdVectorWhite = ogBirdVectorWhite
-        val newBirdVector = ogBirdVector
-
         val vectorFile = context["res/drawable/ic_vector_twitter_white.xml"]
-        vectorFile.writeText(newBirdVectorWhite)
+        vectorFile.writeText(ogBirdVectorWhite)
 
         val vectorFileDark = context["res/drawable/ic_vector_twitter.xml"]
-        vectorFileDark.writeText(newBirdVector)
+        vectorFileDark.writeText(ogBirdVector)
     }
 }

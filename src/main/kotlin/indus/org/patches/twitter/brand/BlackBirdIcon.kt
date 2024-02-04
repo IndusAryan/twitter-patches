@@ -19,21 +19,21 @@ import java.nio.file.Files
 object BlackBirdIcon : ResourcePatch() {
 
     private val newAvatarMarkerTwitterContent = XMLUtils.newAvatarMarkerTwitterContent.trimIndent()
-    private val blackbird = XMLUtils.blackBirdIco.trimIndent()
+    //private val blackbird = XMLUtils.blackBirdIco.trimIndent()
 
     override fun execute(context: ResourceContext) {
 
         updateAvatarMarkerTwitterXml(context)
         updateLauncherXmlFiles(context)
-        XMLUtils.updateXVector(context)
-        //SplashScreenHelper().changeSplashScreen(context)
+        //XMLUtils.updateXVector(context)
+        SplashScreenHelper().changeSplashScreen(context)
     }
 
     private fun updateAvatarMarkerTwitterXml(context: ResourceContext) {
         val avatarMarkerTwitterFile = context["res/drawable/avatar_marker_twitter.xml"]
         if (!avatarMarkerTwitterFile.isFile) Files.createFile(avatarMarkerTwitterFile.toPath())
 
-        avatarMarkerTwitterFile.writeText(blackbird)
+        //avatarMarkerTwitterFile.writeText(blackbird)
     }
 
     private fun updateLauncherXmlFiles(context: ResourceContext) {
