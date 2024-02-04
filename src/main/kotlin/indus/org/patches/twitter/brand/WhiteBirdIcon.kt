@@ -23,7 +23,7 @@ object WhiteBirdIcon : ResourcePatch() {
         updateAvatarMarkerTwitterXml(context)
         // Update ic_launcher_twitter.xml and ic_launcher_twitter_round.xml
         updateLauncherXmlFiles(context)
-        XMLUtils.updateXVector(context)
+        XMLUtils().updateXVector(context)
         SplashScreenHelper().changeSplashScreen(context)
     }
 

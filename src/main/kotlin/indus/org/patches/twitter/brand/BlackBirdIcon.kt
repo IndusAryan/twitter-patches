@@ -18,7 +18,7 @@ import java.nio.file.Files
 @Suppress("unused")
 object BlackBirdIcon : ResourcePatch() {
 
-    private val newAvatarMarkerTwitterContent = XMLUtils.newAvatarMarkerTwitterContent.trimIndent()
+    //private val newAvatarMarkerTwitterContent = XMLUtils().newAvatarMarkerTwitterContent
     //private val blackbird = XMLUtils.blackBirdIco.trimIndent()
 
     override fun execute(context: ResourceContext) {
