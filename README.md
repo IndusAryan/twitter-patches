@@ -17,7 +17,7 @@ To use these patches, follow the steps below:
 2. Set `twitter-patches` as the source for your patches.
 
 <div style="display:flex; justify-content:space-between;">  
-<img src="raw/1.png" alt="usage" width="200" />  
+<img src="screenshots/raw1.jpg" alt="usage" width="200" />  
 </div>  
 
 ## Warning:
@@ -25,25 +25,30 @@ Only use 1 icon patch and deselect other two otherwise; last applied patch will 
 
 ## Icons
 <div style="display:flex; justify-content:space-between;">  
-<img src="raw/2.png" alt="icons" width="200" />  
+<img src="screenshots/raw2.jpg" alt="icons" width="300" />  
 </div>  
 
 ## Screenshots
 
 <div style="display:flex; flex-direction:row;">
   <div style="margin-right: 20px; text-align: center;">
-    <img src="raw/3.png" alt="grey" width="200" />
-    <p>Grey Theme</p>
+    <img src="screenshots/3.jpg" alt="grey" width="200" />
   </div>
 
   <div style="margin-right: 20px; text-align: center;">
-    <img src="raw/4.png" alt="monet" width="200" />
-    <p>Monet Theme</p>
+    <img src="screenshots/4.jpg" alt="monet" width="200" />
   </div>
 
   <div style="text-align: center;">
-    <img src="raw/5.png" alt="other" width="200" />
-    <p>Other Theme</p>
+    <img src="screenshots/5.jpg" alt="other" width="200" />
+  </div>
+
+<div style="text-align: center;">
+    <img src="screenshots/6.jpg" alt="other" width="200" />
+  </div>
+
+<div style="text-align: center;">
+    <img src="screenshots/7.jpg" alt="other" width="200" />
   </div>
 </div>
 
