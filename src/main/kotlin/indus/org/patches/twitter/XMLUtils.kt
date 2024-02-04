@@ -12,9 +12,11 @@ class XMLUtils(context: ResourceContext) {
 
     private val avatarMarkerTwitterFile = context["res/drawable/avatar_marker_twitter.xml"]
     private val mipmapDirectory = context["res"].resolve("mipmap-anydpi")
-    private val mipmapDirectoryv26 = context["res"].resolve("mipmap-anydpi-v26")
+    private val mipmapDirectory26 = context["res"].resolve("mipmap-anydpi-v26")
     private val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
     private val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
+    private val icLauncherTwitterXml26 = mipmapDirectory26.resolve("ic_launcher_twitter.xml")
+    private val icLauncherTwitterRoundXml26 = mipmapDirectory26.resolve("ic_launcher_twitter_round.xml")
 
     private fun avatarFile() {
         if (!avatarMarkerTwitterFile.isFile) Files.createFile(avatarMarkerTwitterFile.toPath())
@@ -157,11 +159,7 @@ class XMLUtils(context: ResourceContext) {
     }
 
     private fun updateXmlFile(xmlFile: File) {
-        val directoryToUse = if (Files.notExists(mipmapDirectory.toPath())) mipmapDirectoryv26 else mipmapDirectory
-
-        if (!Files.isDirectory(directoryToUse.toPath())) {
-            throw PatchException("Mipmap directory not found: $directoryToUse")
-        }
+        if (!Files.isRegularFile(xmlFile.toPath())) throw PatchException("$xmlFile not found.")
 
         val content = xmlFile.readText()
         val modifiedContent = content.replace(
@@ -174,7 +172,15 @@ class XMLUtils(context: ResourceContext) {
 
     fun updateLauncherXmlFiles() {
         // Update ic_launcher_twitter.xml && ic_launcher_twitter_round.xml
-        updateXmlFile(icLauncherTwitterXml)
-        updateXmlFile(icLauncherTwitterRoundXml)
+
+        if (mipmapDirectory.isDirectory) {
+            updateXmlFile(icLauncherTwitterXml)
+            updateXmlFile(icLauncherTwitterRoundXml)
+        }
+        else if(!mipmapDirectory.isDirectory) {
+            updateXmlFile(icLauncherTwitterXml26)
+            updateXmlFile(icLauncherTwitterRoundXml26)
+        }
+        else throw PatchException("Mipmap directory not found")
     }
 }
