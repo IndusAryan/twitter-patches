@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/IndusAryan/twitter-patches/compare/v1.8.0...v1.9.0) (2024-02-04)
+
+
+### Features
+
+* **twitter:** good morning! ([469e6f0](https://github.com/IndusAryan/twitter-patches/commit/469e6f0afa44ea66f9c26ee87267804bc27c77eb))
+
 # [1.8.0](https://github.com/IndusAryan/twitter-patches/compare/v1.7.0...v1.8.0) (2024-02-03)
 
 
