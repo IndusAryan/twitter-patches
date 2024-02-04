@@ -47,6 +47,8 @@ object OGTwitterBrand : ResourcePatch() {
                 "rux_landing_page_title" to "Tweet",
                 "tweet_fab_item" to "Tweet",
                 "tweet_title" to "Tweet",
+                "search_twitter" to "Search Twitter",
+                "search_hint" to "Search Twitter",
                 "ps__accessibility_retweet_broadcast_button" to "Retweet",
                 "shortcut_retweet_tweet" to "Retweet",
                 "social_you_retweeted" to "You retweeted",

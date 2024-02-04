@@ -12,6 +12,7 @@ class XMLUtils(context: ResourceContext) {
 
     private val avatarMarkerTwitterFile = context["res/drawable/avatar_marker_twitter.xml"]
     private val mipmapDirectory = context["res"].resolve("mipmap-anydpi")
+    private val mipmapDirectoryv26 = context["res"].resolve("mipmap-anydpi-v26")
     private val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
     private val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
 
@@ -156,7 +157,11 @@ class XMLUtils(context: ResourceContext) {
     }
 
     private fun updateXmlFile(xmlFile: File) {
-        if (!Files.isRegularFile(xmlFile.toPath())) throw PatchException("$xmlFile not found.")
+        val directoryToUse = if (Files.notExists(mipmapDirectory.toPath())) mipmapDirectoryv26 else mipmapDirectory
+
+        if (!Files.isDirectory(directoryToUse.toPath())) {
+            throw PatchException("Mipmap directory not found: $directoryToUse")
+        }
 
         val content = xmlFile.readText()
         val modifiedContent = content.replace(

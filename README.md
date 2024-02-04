@@ -1,42 +1,60 @@
-# 👋🧩 ReVanced Patches template
+## Patches for twitter:
 
-This is a template for creating a new ReVanced Patches repository.  
-The repository can have multiple patches, and patches from other repositories can be used together.
+```kotlin
+⦿ App wide Material Theme (replaces Dim)
+⦿ Grey Theme (replaces LightsOut)
+⦿ OG Twitter name and in app branding
+⦿ Bird Splash screen and toolbar
+⦿ Three Icon sets
+⦿ Hide promoted users and AdBlock (from revanced official)
+```  
 
-For an example repository, see [ReVanced Patches](https://github.com/revanced/revanced-patches).
+## Usage
 
-##  🚀 Get started
+To use these patches, follow the steps below:
 
-To start using this template, follow these steps:
+1. Make `IndusAryan` the organization for your Revanced app.
+2. Set `twitter-patches` as the source for your patches.
 
-1. [Create a new repository using this template](https://github.com/new?template_name=revanced-patches-template&template_owner=ReVanced)
-2. Set up the [build.gradle.kts](build.gradle.kts) file (Match the [group of the project](build.gradle.kts#L8), [manifest attributes](build.gradle.kts#L35-L43), and the [POM](build.gradle.kts#L84-L106) that will be published to yours)
-3. Update the dependencies in the [libs.versions.toml](gradle/libs.versions.toml) file
-4. [Add a secret](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) to indus repository named [REPOSITORY_PUSH_ACCESS](.github/workflows/release.yml#L47) containing a GitHub access token with [push access](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/ci-configuration.md#authentication)
-5. Set up the [README.md](README.md) file[^1] (e.g, title, description, license, summary of the patches that are included in the repository)
+<div style="display:flex; justify-content:space-between;">  
+<img src="raw/1.png" alt="usage" width="200" />  
+</div>  
 
-🎉 You are now ready to start creating patches!
+## Warning:
+Only use 1 icon patch and deselect other two otherwise; last applied patch will be used.
 
-## 🔘 Optional steps
+## Icons
+<div style="display:flex; justify-content:space-between;">  
+<img src="raw/2.png" alt="icons" width="200" />  
+</div>  
 
-You can also add the following things to the repository:
+## Screenshots
 
-- [Issue templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)[^2]
-- Contribution guidelines[^3]
-- Documentation, if you want to publish indus patches as a library[^4]
+<div style="display:flex; flex-direction:row;">
+  <div style="margin-right: 20px; text-align: center;">
+    <img src="raw/3.png" alt="grey" width="200" />
+    <p>Grey Theme</p>
+  </div>
 
-[^1]: [Example README.md file](https://github.com/ReVanced/revanced-patches/blob/main/README.md)
-[^2]: [Example issue templates](https://github.com/ReVanced/revanced-patches/tree/main/.github/ISSUE_TEMPLATE)
-[^3]: [Example contribution guidelines](https://github.com/ReVanced/revanced-patches/blob/main/CONTRIBUTING.md)
-[^4]: [Example documentation](https://github.com/ReVanced/revanced-patches/tree/docs/docs)
+  <div style="margin-right: 20px; text-align: center;">
+    <img src="raw/4.png" alt="monet" width="200" />
+    <p>Monet Theme</p>
+  </div>
 
-## 🧑‍💻 Usage
+  <div style="text-align: center;">
+    <img src="raw/5.png" alt="other" width="200" />
+    <p>Other Theme</p>
+  </div>
+</div>
 
-In order to develop and release ReVanced Patches using this template, some things need to be considered:
+## Contributing
+If you would like to contribute to the project in any way better, you can PR.
 
-- Development originates in feature branches. Once a feature branch is ready, it is squshed and merged into the `dev` branch
-- The `dev` branch is merged into the `main` branch once it is ready for release
-- Semantic versioning is used for versioning ReVanced Patches. ReVanced Patches have a public API for other patches to use
-- Semantic commit messages are used for commits
-- Commits on the `dev` branch and `main` branch are automatically released via the [release.yml](.github/workflows/release.yml) workflow, which is also responsible for generating the changelog and updating the version of ReVanced Patches. It is triggered by pushing to the `dev` or `main` branch. The workflow uses the `publish` task to publish the release of ReVanced Patches
-- In order to build ReVanced Patches, that can be used on Android, the [`generateBundle`](build.gradle.kts#L48-L70) task needs to be run. The [`publish` task depends on the `generateBundle`](build.gradle.kts#L74-L76) task, so it will be run automatically when publishing a release.
+## License
+[![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](http://www.gnu.org/licenses/gpl-3.0.en.html)
+
+These patches are fully FOSS. You can use, study, share and modify it at your will. They can be redistributed and/or modified under the terms of the [GNU General Public License](https://www.gnu.org/licenses/gpl.html) version 3 or later published by the Free Software Foundation.
+
+---
+### Info:
+These patches are for educational purpose and personal usages and are safe and don't tamper with any application functionality neither they are capable of it in any way. We are not affiliated with Revanced Project. 
