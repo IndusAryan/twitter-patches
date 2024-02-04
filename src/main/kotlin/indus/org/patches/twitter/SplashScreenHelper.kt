@@ -17,7 +17,6 @@ class SplashScreenHelper {
 </vector>
     """.trimIndent()
 
-
         val splashFile = context["res/drawable/splash_screen_icon.xml"]
         splashFile.writeText(newSplashVector)
     }

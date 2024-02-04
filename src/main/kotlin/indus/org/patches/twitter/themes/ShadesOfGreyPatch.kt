@@ -41,7 +41,7 @@ object ShadesOfGreyPatch  : ResourcePatch() {
                         "abstractColorLightGray" to "#ff2f3336",
                         "abstractColorLink" to "@color/twitter_blue",
                         "abstractColorMediumGray" to "#ffd9d9d9",
-                        "abstractColorText" to "@color/white",
+                        "abstractColorText" to "#d9d9d9",
                         "abstractColorUnread" to "#ff051d2b",
                         "abstractElevatedBackground" to "#ff1b2023",
                         "abstractElevatedBackgroundShadow" to "@color/black_opacity_10"

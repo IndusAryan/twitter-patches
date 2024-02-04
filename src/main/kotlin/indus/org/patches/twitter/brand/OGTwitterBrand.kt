@@ -7,7 +7,7 @@ import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 
 @Patch(
-    name = "OG Twitter brand name",
+    name = "OG Twitter brand",
     description = "Replaces the app name from nonsense X to Twitter and words like post to tweet, repost to retweet, etc.",
     compatiblePackages = [CompatiblePackage("com.twitter.android")]
 )
@@ -21,12 +21,11 @@ object OGTwitterBrand : ResourcePatch() {
 
         context.xmlEditor["AndroidManifest.xml"].use { editor ->
             val document = editor.file
-
             val applicationNode = document.getElementsByTagName("application").item(0)
             val appNameAttribute = applicationNode.attributes.getNamedItem("android:label")
             appNameAttribute.textContent = "Twitter"
-
         }
+
         updateStrings(context)
     }
 

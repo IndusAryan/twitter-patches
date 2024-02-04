@@ -18,7 +18,7 @@ object WhiteBirdIcon : ResourcePatch() {
     override fun execute(context: ResourceContext) {
 
         XMLUtils(context).whiteIconBlackBG()
-        XMLUtils(context).updateLauncherXmlFiles(context)
+        XMLUtils(context).updateLauncherXmlFiles()
         XMLUtils(context).updateXVector(context)
         SplashScreenHelper().changeSplashScreen(context)
     }

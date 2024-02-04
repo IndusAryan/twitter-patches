@@ -2,13 +2,19 @@ package indus.org.patches.twitter
 
 import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.PatchException
-import indus.org.patches.twitter.brand.BlueBirdIcon
 import java.io.File
 import java.nio.file.Files
 
+/** FutureProof way in case someone changes icon frequently or twitter update deletes the res file **/
 class XMLUtils(context: ResourceContext) {
 
+    /*** ⚠ DON'T TOUCH THE XML WITHIN """INDENTS""", IT FUCKS UP THE WHOLE VECTOR AS WELL AS PATCH  **/
+
     private val avatarMarkerTwitterFile = context["res/drawable/avatar_marker_twitter.xml"]
+    private val mipmapDirectory = context["res"].resolve("mipmap-anydpi")
+    private val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
+    private val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
+
     private fun avatarFile() {
         if (!avatarMarkerTwitterFile.isFile) Files.createFile(avatarMarkerTwitterFile.toPath())
     }
@@ -48,7 +54,7 @@ class XMLUtils(context: ResourceContext) {
         avatarMarkerTwitterFile.writeText(blackBird)
     }
 
-    fun blueIcon(context: ResourceContext) {
+    fun blueIcon() {
         val newAvatarMarkerTwitterContent = """
         <?xml version='1.0' encoding='utf-8' ?>
         <vector android:height="24dp"
@@ -79,9 +85,7 @@ class XMLUtils(context: ResourceContext) {
         </vector>
         """.trimIndent()
 
-        val avatarMarkerTwitterFile = context["res/drawable/avatar_marker_twitter.xml"]
-        if (!avatarMarkerTwitterFile.isFile) Files.createFile(avatarMarkerTwitterFile.toPath())
-
+        avatarFile()
         avatarMarkerTwitterFile.writeText(newAvatarMarkerTwitterContent)
     }
 
@@ -98,7 +102,7 @@ class XMLUtils(context: ResourceContext) {
                     android:translateY="407.0">
                     <group android:translateX="1.0"
                         android:translateY="1.0">
-                        <path android:fillColor="#ff2aa4f1"
+                        <path android:fillColor="#ff0f1419""
                             android:pathData="M 7 0 L 7 0 Q 14 0 14 7 L 14 7 Q 14 14 7 14 L 7 14 Q 0 14 0 7 L 0 7 Q 0 0 7 0 Z"
                             android:strokeWidth="1.0"
                             android:fillType="evenOdd" />
@@ -163,11 +167,7 @@ class XMLUtils(context: ResourceContext) {
         xmlFile.writeText(modifiedContent)
     }
 
-    fun updateLauncherXmlFiles(context: ResourceContext) {
-        val mipmapDirectory = context["res"].resolve("mipmap-anydpi")
-        val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
-        val icLauncherTwitterRoundXml = mipmapDirectory.resolve("ic_launcher_twitter_round.xml")
-
+    fun updateLauncherXmlFiles() {
         // Update ic_launcher_twitter.xml && ic_launcher_twitter_round.xml
         updateXmlFile(icLauncherTwitterXml)
         updateXmlFile(icLauncherTwitterRoundXml)
