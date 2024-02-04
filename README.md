@@ -7,8 +7,7 @@
 ⦿ Bird Splash screen and toolbar
 ⦿ Three Icon sets
 ⦿ Hide promoted users and AdBlock (from revanced official)
-```  
-
+```
 ## Usage
 
 To use these patches, follow the steps below:
