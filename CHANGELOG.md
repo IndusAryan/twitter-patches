@@ -1,3 +1,11 @@
+## [1.9.1](https://github.com/IndusAryan/twitter-patches/compare/v1.9.0...v1.9.1) (2024-02-04)
+
+
+### Bug Fixes
+
+* **twitter:** excellent bur confusing morning! ([7fcf447](https://github.com/IndusAryan/twitter-patches/commit/7fcf44795816da0b64ceac01e7caa853f7661664))
+* **twitter:** excellent morning! ([ecc3040](https://github.com/IndusAryan/twitter-patches/commit/ecc3040115442b5626834706d9f5bf413ba917b9))
+
 # [1.9.0](https://github.com/IndusAryan/twitter-patches/compare/v1.8.0...v1.9.0) (2024-02-04)
 
 
