@@ -1,3 +1,10 @@
+## [1.9.4](https://github.com/IndusAryan/twitter-patches/compare/v1.9.3...v1.9.4) (2024-02-04)
+
+
+### Bug Fixes
+
+* **twitter:** cleanupp ([7ae7244](https://github.com/IndusAryan/twitter-patches/commit/7ae7244d4d5194204220c13d999e643906722100))
+
 ## [1.9.3](https://github.com/IndusAryan/twitter-patches/compare/v1.9.2...v1.9.3) (2024-02-04)
 
 
