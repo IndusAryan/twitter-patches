@@ -1,3 +1,10 @@
+# [1.10.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.9.4...v1.10.0-dev.1) (2024-02-04)
+
+
+### Features
+
+* **twitter:** more strings ([37d9b95](https://github.com/IndusAryan/twitter-patches/commit/37d9b9551103a2a280a303647d3fa7ffbb029b02))
+
 ## [1.9.4](https://github.com/IndusAryan/twitter-patches/compare/v1.9.3...v1.9.4) (2024-02-04)
 
 
