@@ -21,9 +21,9 @@ object BlueBirdIcon : ResourcePatch() {
     /** FutureProof way in case someone changes icon frequently **/
     override fun execute(context: ResourceContext) {
 
-        XMLUtils().blueIcon(context)
+        XMLUtils(context).blueIcon(context)
         updateLauncherXmlFiles(context)
-        XMLUtils().updateXVector(context)
+        XMLUtils(context).updateXVector(context)
         SplashScreenHelper().changeSplashScreen(context)
     }
 
