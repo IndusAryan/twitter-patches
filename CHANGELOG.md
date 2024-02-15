@@ -1,3 +1,4 @@
+
 # [1.10.0-dev.5](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.4...v1.10.0-dev.5) (2024-02-15)
 
 
@@ -6,21 +7,6 @@
 * **twitter:** add video download & viewcount patch (from revanced) ([8fe29b2](https://github.com/IndusAryan/twitter-patches/commit/8fe29b2f15802f7ae032236bc92a3a59eb087901))
 
 # [1.10.0-dev.4](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.3...v1.10.0-dev.4) (2024-02-04)
-
-
-### Bug Fixes
-
-* **twitter:** improvise og twitter brand patch ([de0a399](https://github.com/IndusAryan/twitter-patches/commit/de0a39948d3e4b59085001aa1f189783ac098420))
-
-# [1.10.0-dev.3](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.2...v1.10.0-dev.3) (2024-02-04)
-
-
-### Bug Fixes
-
-* **twitter:** mipmap in some apks ([3a4c18b](https://github.com/IndusAryan/twitter-patches/commit/3a4c18b50ad9617688daee57464c706cec2ab7df))
-
-# [1.10.0-dev.2](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.1...v1.10.0-dev.2) (2024-02-04)
-
 
 ### Features
 
