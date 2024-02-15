@@ -5,6 +5,7 @@ import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
+import java.io.File
 
 @Patch(
     name = "OG Twitter brand",
@@ -31,9 +32,21 @@ object OGTwitterBrand : ResourcePatch() {
 
     private fun updateStrings(context: ResourceContext) {
         val stringsFile = context["res/values/strings.xml"]
-        if (!stringsFile.isFile) throw PatchException("strings.xml file not found.")
+        val stringsUK = context["res/values-en-rGB/strings.xml"]
 
-        context.xmlEditor["res/values/strings.xml"].use { editor ->
+        if (!stringsFile.isFile || !stringsUK.isFile) {
+            throw PatchException("strings.xml file not found.")
+        }
+
+        // Update strings.xml
+        updateStringsFile(stringsFile, context)
+        // Update strings-en-rGB.xml (British English)
+        updateStringsFile(stringsUK, context)
+    }
+
+    private fun updateStringsFile(stringsFile: File, context: ResourceContext) {
+
+        context.xmlEditor[stringsFile.toString()].use { editor ->
             val document = editor.file
 
             val replacementMap = mapOf(
@@ -75,17 +88,27 @@ object OGTwitterBrand : ResourcePatch() {
                 "tweets_retweet" to "Retweet",
                 "tweets_retweeted" to "%s retweeted",
                 "tweets_undo_retweet_vertical" to "Undo retweet",
-                "users_turn_on_retweets" to "Turn on retweets"
+                "users_turn_on_retweets" to "Turn on retweets",
+                "ps__post_broadcast_twitter" to "Post on Twitter",
+                "ps__retweet_broadcast_action" to "Retweet on Twitter",
+                "retweeters_title" to "Retweeted by"
             )
 
             for ((key, value) in replacementMap) {
                 val nodes = document.getElementsByTagName("string")
+                var keyReplaced = false
+
                 for (i in 0 until nodes.length) {
                     val node = nodes.item(i)
                     if (node.attributes.getNamedItem("name")?.nodeValue == key) {
                         node.textContent = value
+                        keyReplaced = true
                         break
                     }
+                }
+
+                if (!keyReplaced) {
+                    println("Key not found: $key")
                 }
             }
         }

@@ -10,7 +10,8 @@ import indus.org.patches.twitter.XMLUtils
 @Patch(
     name = "OG Bird icon",
     description = "Replaces the X icon with original Blue Twitter icon.",
-    compatiblePackages = [CompatiblePackage("com.twitter.android")]
+    compatiblePackages = [CompatiblePackage("com.twitter.android")],
+    use = true
 )
 @Suppress("unused")
 object BlueBirdIcon : ResourcePatch() {

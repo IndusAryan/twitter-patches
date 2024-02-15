@@ -10,7 +10,8 @@ import indus.org.patches.twitter.XMLUtils
 @Patch(
     name = "Black Bird icon",
     description = "Black bird with white background.",
-    compatiblePackages = [CompatiblePackage("com.twitter.android")]
+    compatiblePackages = [CompatiblePackage("com.twitter.android")],
+    use = false
 )
 @Suppress("unused")
 object BlackBirdIcon : ResourcePatch() {
