@@ -4,9 +4,14 @@
 ⦿ App wide Material Theme (replaces Dim)
 ⦿ Grey Theme (replaces LightsOut)
 ⦿ OG Twitter name and in app branding
-⦿ Bird Splash screen and toolbar
+⦿ Bird Splash screen and toolbar icon
 ⦿ Three Icon sets
-⦿ Hide promoted users and AdBlock (from revanced official)
+
+-> from Revanced Official
+
+⦿ Video downloads
+⦿ Hide tweet View counts
+⦿ Hide promoted users and AdBlock
 ```
 ## Usage
 
