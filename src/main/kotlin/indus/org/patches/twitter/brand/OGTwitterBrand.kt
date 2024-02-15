@@ -88,7 +88,10 @@ object OGTwitterBrand : ResourcePatch() {
                 "tweets_retweet" to "Retweet",
                 "tweets_retweeted" to "%s retweeted",
                 "tweets_undo_retweet_vertical" to "Undo retweet",
-                "users_turn_on_retweets" to "Turn on retweets"
+                "users_turn_on_retweets" to "Turn on retweets",
+                "ps__post_broadcast_twitter" to "Post on Twitter",
+                "ps__retweet_broadcast_action" to "Retweet on Twitter",
+                "retweeters_title" to "Retweeted by"
             )
 
             for ((key, value) in replacementMap) {

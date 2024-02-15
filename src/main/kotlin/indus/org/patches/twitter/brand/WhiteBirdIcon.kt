@@ -10,7 +10,8 @@ import indus.org.patches.twitter.XMLUtils
 @Patch(
     name = "White Bird icon",
     description = "Replaces the X icon with a white Bird keeping black background.",
-    compatiblePackages = [CompatiblePackage("com.twitter.android")]
+    compatiblePackages = [CompatiblePackage("com.twitter.android")],
+    use = false
 )
 @Suppress("unused")
 object WhiteBirdIcon : ResourcePatch() {
