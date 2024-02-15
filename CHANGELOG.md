@@ -1,3 +1,10 @@
+# [1.10.0-dev.5](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.4...v1.10.0-dev.5) (2024-02-15)
+
+
+### Features
+
+* **twitter:** add video download & viewcount patch (from revanced) ([8fe29b2](https://github.com/IndusAryan/twitter-patches/commit/8fe29b2f15802f7ae032236bc92a3a59eb087901))
+
 # [1.10.0-dev.4](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.3...v1.10.0-dev.4) (2024-02-04)
 
 
