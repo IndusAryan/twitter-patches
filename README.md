@@ -4,9 +4,18 @@
 ⦿ App wide Material Theme (replaces Dim)
 ⦿ Grey Theme (replaces LightsOut)
 ⦿ OG Twitter name and in app branding
-⦿ Bird Splash screen and toolbar
+⦿ Bird Splash screen and toolbar icon
 ⦿ Three Icon sets
-⦿ Hide promoted users and AdBlock (from revanced official)
+⦿ Video downloads
+
+-> from Revanced Official
+⦿ Hide tweet View counts
+⦿ Hide promoted users and AdBlock
+
+-> from Crimera Piko
+⦿ Hide Google ads
+⦿ Clean URL
+⦿ Hide Promoted Trends
 ```
 ## Usage
 
@@ -61,4 +70,4 @@ These patches are fully FOSS. You can use, study, share and modify it at your wi
 
 ---
 ### Info:
-These patches are for educational purpose and personal usages and are safe and don't tamper with any application functionality neither they are capable of it in any way. We are not affiliated with Revanced Project. 
+These patches are only for educational purpose and personal usages. They are safe and don't tamper with any application functionality in a negative way, neither they are capable of it. We are not affiliated with Revanced Project. Some patches and parts are taken from Crimera and TheRealSwak, So many thanks to them and do star their Repo. 

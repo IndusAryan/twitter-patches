@@ -12,5 +12,4 @@ import indus.org.patches.twitter.hook.patch.BaseHookPatch
 )
 @Suppress("unused")
 object HideRecommendedUsersPatch : BaseHookPatch(
-    "Lapp/revanced/integrations/twitter/patches/hook/patch/recommendation/RecommendedUsersHook;"
-)
+    "Lapp/revanced/integrations/twitter/patches/hook/patch/recommendation/RecommendedUsersHook;")
