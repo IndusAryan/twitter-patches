@@ -1,3 +1,10 @@
+# [1.10.0-dev.7](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.6...v1.10.0-dev.7) (2024-03-16)
+
+
+### Features
+
+* **twitter:** new patches ([d72d85a](https://github.com/IndusAryan/twitter-patches/commit/d72d85a1506cde38b29bcc50751c25a147092929))
+
 # [1.10.0-dev.6](https://github.com/IndusAryan/twitter-patches/compare/v1.10.0-dev.5...v1.10.0-dev.6) (2024-03-14)
 
 
