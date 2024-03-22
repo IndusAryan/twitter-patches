@@ -11,6 +11,7 @@ class XMLUtils(context: ResourceContext) {
     /*** ⚠ DON'T TOUCH THE XML WITHIN """INDENTS""", IT FUCKS UP THE WHOLE VECTOR AS WELL AS PATCH  **/
 
     private val avatarMarkerTwitterFile = context["res/drawable/avatar_marker_twitter.xml"]
+    private val monochromeFile = context["res/drawable/ic_vector_twitter_circle_fill.xml"]
     private val mipmapDirectory = context["res"].resolve("mipmap-anydpi")
     private val mipmapDirectory26 = context["res"].resolve("mipmap-anydpi-v26")
     private val icLauncherTwitterXml = mipmapDirectory.resolve("ic_launcher_twitter.xml")
@@ -54,6 +55,7 @@ class XMLUtils(context: ResourceContext) {
         """.trimIndent()
 
         avatarFile()
+        addMonochromeIcon()
         avatarMarkerTwitterFile.writeText(whiteBird)
     }
 
@@ -89,6 +91,7 @@ class XMLUtils(context: ResourceContext) {
         """.trimIndent()
 
         avatarFile()
+        addMonochromeIcon()
         avatarMarkerTwitterFile.writeText(newAvatarMarkerTwitterContent)
     }
 
@@ -124,6 +127,7 @@ class XMLUtils(context: ResourceContext) {
         """.trimIndent()
 
         avatarFile()
+        addMonochromeIcon()
         avatarMarkerTwitterFile.writeText(blackIcon)
     }
 
@@ -158,6 +162,25 @@ class XMLUtils(context: ResourceContext) {
         vectorFileDark.writeText(newBirdVector)
     }
 
+    private fun addMonochromeIcon() {
+        if (!monochromeFile.isFile) {
+            Files.createFile(monochromeFile.toPath())
+        }
+
+        val adaptiveIcon = """
+        <?xml version='1.0' encoding='utf-8' ?>
+        <vector android:height="24.0dp"
+                android:width="24.0dp"
+                android:viewportWidth="24.0"
+                android:viewportHeight="24.0" xmlns:android="http://schemas.android.com/apk/res/android">
+          <path android:fillColor="#ffffffff"
+                android:pathData="M16.62,10.08c0.004,0.095 0.007,0.192 0.007,0.29 0,2.956 -2.25,6.366 -6.368,6.366 -1.265,0 -2.44,-0.37 -3.43,-1.005 0.174,0.022 0.352,0.032 0.533,0.032 1.048,0 2.013,-0.358 2.78,-0.958 -0.98,-0.018 -1.806,-0.665 -2.09,-1.554 0.135,0.026 0.276,0.04 0.42,0.04 0.204,0 0.402,-0.028 0.59,-0.08 -1.024,-0.204 -1.795,-1.11 -1.795,-2.194v-0.028c0.302,0.168 0.647,0.268 1.014,0.28 -0.6,-0.4 -0.995,-1.087 -0.995,-1.863 0,-0.41 0.11,-0.794 0.303,-1.125 1.104,1.354 2.753,2.245 4.613,2.338 -0.038,-0.164 -0.058,-0.334 -0.058,-0.51 0,-1.236 1.002,-2.238 2.238,-2.238 0.644,0 1.225,0.272 1.633,0.706 0.51,-0.1 0.99,-0.287 1.42,-0.543 -0.166,0.522 -0.52,0.96 -0.983,1.238 0.453,-0.053 0.884,-0.174 1.285,-0.35 -0.3,0.45 -0.68,0.843 -1.118,1.16z"/>
+        </vector>
+    """.trimIndent()
+
+    monochromeFile.writeText(adaptiveIcon)
+    }
+
     private fun updateXmlFile(xmlFile: File) {
         if (!Files.isRegularFile(xmlFile.toPath())) throw PatchException("$xmlFile not found.")
 
@@ -165,6 +188,9 @@ class XMLUtils(context: ResourceContext) {
         val modifiedContent = content.replace(
             """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
             """android:drawable="@drawable/avatar_marker_twitter""""
+        ).replace(
+            """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
+            """android:drawable="@drawable/ic_vector_twitter_circle_fill""""
         )
 
         xmlFile.writeText(modifiedContent)
