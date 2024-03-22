@@ -1,3 +1,10 @@
+# [1.12.0-dev.6](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.5...v1.12.0-dev.6) (2024-03-22)
+
+
+### Features
+
+* **twitter:** prepare merge2 ([33626bb](https://github.com/IndusAryan/twitter-patches/commit/33626bbd5d4608718f1b365cdcab78ddc90dd341))
+
 # [1.12.0-dev.5](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.4...v1.12.0-dev.5) (2024-03-22)
 
 
