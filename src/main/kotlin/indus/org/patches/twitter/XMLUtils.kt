@@ -207,6 +207,7 @@ class XMLUtils(context: ResourceContext) {
             updateXmlFile(icLauncherTwitterXml26)
             updateXmlFile(icLauncherTwitterRoundXml26)
         }
+
         else throw PatchException("Mipmap directory not found")
     }
 }
