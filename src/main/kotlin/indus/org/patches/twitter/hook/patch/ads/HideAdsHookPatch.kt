@@ -7,9 +7,10 @@ import indus.org.patches.twitter.hook.patch.BaseHookPatch
 
 @Patch(
     name = "Hide ads",
-    description = "Hides ads.",
+    description = "DON'T USE WITH CRIMERA INTEGRATIONS (NOT NEEDED ANYWAYS).",
     dependencies = [JsonHookPatch::class],
-    compatiblePackages = [CompatiblePackage("com.twitter.android")]
+    compatiblePackages = [CompatiblePackage("com.twitter.android")],
+    use = false
 )
 @Suppress("unused")
 object HideAdsHookPatch : BaseHookPatch("Lapp/revanced/integrations/twitter/patches/hook/patch/ads/AdsHook;")
