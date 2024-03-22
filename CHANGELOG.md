@@ -1,3 +1,70 @@
+# [1.12.0-dev.6](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.5...v1.12.0-dev.6) (2024-03-22)
+
+
+### Features
+
+* **twitter:** prepare merge2 ([33626bb](https://github.com/IndusAryan/twitter-patches/commit/33626bbd5d4608718f1b365cdcab78ddc90dd341))
+
+# [1.12.0-dev.5](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.4...v1.12.0-dev.5) (2024-03-22)
+
+
+### Features
+
+* **twitter:** prepare merge ([e22f6ec](https://github.com/IndusAryan/twitter-patches/commit/e22f6ec42bc010c3d4f1702d41e46d7d6462264d))
+
+# [1.12.0-dev.4](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.3...v1.12.0-dev.4) (2024-03-22)
+
+
+### Bug Fixes
+
+* **twitter:** fix monochrome again lmao ([37375b7](https://github.com/IndusAryan/twitter-patches/commit/37375b771babeb99f0c44e5fccf8f996904dcce0))
+
+# [1.12.0-dev.3](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.2...v1.12.0-dev.3) (2024-03-22)
+
+
+### Bug Fixes
+
+* **twitter:** fix monochrome ([4d6622a](https://github.com/IndusAryan/twitter-patches/commit/4d6622a29d18da3fdbcc0412310ca141b738bc40))
+
+# [1.12.0-dev.2](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.1...v1.12.0-dev.2) (2024-03-22)
+
+
+### Features
+
+* **twitter:** add warning. ([2cd9fc4](https://github.com/IndusAryan/twitter-patches/commit/2cd9fc47495f4f51e685cbcc45370ea60138f879))
+
+# [1.12.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.11.0...v1.12.0-dev.1) (2024-03-22)
+
+
+### Bug Fixes
+
+* **twitter:** fix crash ([9f6aaa4](https://github.com/IndusAryan/twitter-patches/commit/9f6aaa42eeace22f539a533b1cf8fda7488ea116))
+
+
+### Features
+
+* **twitter:** initial patch release ([23740b0](https://github.com/IndusAryan/twitter-patches/commit/23740b061cda6bab54f2692bbd248ea78604a106))
+* **twitter:** new patches ([bc94acd](https://github.com/IndusAryan/twitter-patches/commit/bc94acda01cbb78065a7b4b190ad5f082ae89075))
+
+# [1.12.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.11.0...v1.12.0-dev.1) (2024-03-22)
+
+
+### Bug Fixes
+
+* **twitter:** fix crash ([9f6aaa4](https://github.com/IndusAryan/twitter-patches/commit/9f6aaa42eeace22f539a533b1cf8fda7488ea116))
+
+
+### Features
+
+* **twitter:** new patches ([bc94acd](https://github.com/IndusAryan/twitter-patches/commit/bc94acda01cbb78065a7b4b190ad5f082ae89075))
+
+# [1.12.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.11.0...v1.12.0-dev.1) (2024-03-22)
+
+
+### Features
+
+* **twitter:** new patches ([bc94acd](https://github.com/IndusAryan/twitter-patches/commit/bc94acda01cbb78065a7b4b190ad5f082ae89075))
+
 # [1.12.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.11.0...v1.12.0-dev.1) (2024-03-16)
 
 
