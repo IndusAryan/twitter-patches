@@ -1,3 +1,10 @@
+# [1.12.0-dev.2](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.1...v1.12.0-dev.2) (2024-03-22)
+
+
+### Features
+
+* **twitter:** add warning. ([2cd9fc4](https://github.com/IndusAryan/twitter-patches/commit/2cd9fc47495f4f51e685cbcc45370ea60138f879))
+
 # [1.12.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.11.0...v1.12.0-dev.1) (2024-03-22)
 
 
