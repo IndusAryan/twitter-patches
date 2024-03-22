@@ -19,8 +19,9 @@ class XMLUtils(context: ResourceContext) {
     private val icLauncherTwitterXml26 = mipmapDirectory26.resolve("ic_launcher_twitter.xml")
     private val icLauncherTwitterRoundXml26 = mipmapDirectory26.resolve("ic_launcher_twitter_round.xml")
 
-    private fun avatarFile() {
+    private fun createIconFiles() {
         if (!avatarMarkerTwitterFile.isFile) Files.createFile(avatarMarkerTwitterFile.toPath())
+        if (!monochromeFile.isFile) Files.createFile(monochromeFile.toPath())
     }
 
     fun whiteIconBlackBG() {
@@ -54,7 +55,7 @@ class XMLUtils(context: ResourceContext) {
         </vector>
         """.trimIndent()
 
-        avatarFile()
+        createIconFiles()
         addMonochromeIcon()
         avatarMarkerTwitterFile.writeText(whiteBird)
     }
@@ -90,7 +91,7 @@ class XMLUtils(context: ResourceContext) {
         </vector>
         """.trimIndent()
 
-        avatarFile()
+        createIconFiles()
         addMonochromeIcon()
         avatarMarkerTwitterFile.writeText(newAvatarMarkerTwitterContent)
     }
@@ -126,7 +127,7 @@ class XMLUtils(context: ResourceContext) {
         </vector>
         """.trimIndent()
 
-        avatarFile()
+        createIconFiles()
         addMonochromeIcon()
         avatarMarkerTwitterFile.writeText(blackIcon)
     }
@@ -163,10 +164,6 @@ class XMLUtils(context: ResourceContext) {
     }
 
     private fun addMonochromeIcon() {
-        if (!monochromeFile.isFile) {
-            Files.createFile(monochromeFile.toPath())
-        }
-
         val adaptiveIcon = """
         <?xml version='1.0' encoding='utf-8' ?>
         <vector android:height="24.0dp"
@@ -185,12 +182,12 @@ class XMLUtils(context: ResourceContext) {
         if (!Files.isRegularFile(xmlFile.toPath())) throw PatchException("$xmlFile not found.")
 
         val content = xmlFile.readText()
-        val modifiedContent = content.replace(
-            """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
-            """android:drawable="@drawable/avatar_marker_twitter""""
-        ).replace(
-            """android:drawable="@mipmap/ic_launcher_twitter_foreground"""",
-            """android:drawable="@drawable/ic_vector_twitter_circle_fill""""
+        val modifiedContent = content.replaceFirst(
+            """<foreground\s+android:drawable="[^"]+"""",
+            """<foreground android:drawable="@drawable/avatar_marker_twitter""""
+        ).replaceFirst(
+            """<monochrome\s+android:drawable="[^"]+"""",
+            """<monochrome android:drawable="@drawable/ic_vector_twitter_circle_fill""""
         )
 
         xmlFile.writeText(modifiedContent)

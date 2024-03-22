@@ -12,7 +12,7 @@ import indus.org.patches.twitter.crimeraswak.misc.settings.fingerprints.Settings
     name = "Remove \"Who to follow\" Banner",
     dependencies = [SettingsPatch::class, TimelineEntryHookPatch::class],
     compatiblePackages = [CompatiblePackage("com.twitter.android")],
-    use = true
+    use = false
 )
 object HideWTF :BytecodePatch(
     setOf()
