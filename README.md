@@ -6,6 +6,7 @@
 ⦿ OG Twitter name and in app branding
 ⦿ Bird Splash screen and toolbar icon
 ⦿ Three Icon sets
+⦿ Adaptive Monochrome Icon
 ⦿ Video downloads
 
 -> from Revanced Official
@@ -13,9 +14,7 @@
 ⦿ Hide promoted users and AdBlock
 
 -> from Crimera Piko
-⦿ Hide Google ads
-⦿ Clean URL
-⦿ Hide Promoted Trends
+⦿ All Patches and settings menu (RIP originality)
 ```
 ## Usage
 
@@ -33,7 +32,8 @@ Only use 1 icon patch and deselect other two otherwise; last applied patch will 
 
 ## Icons
 <div style="display:flex; justify-content:space-between;">  
-<img src="screenshots/raw2.jpg" alt="icons" width="300" />  
+<img src="screenshots/raw2.jpg" alt="icons" width="300" /> 
+<img src="screenshots/raw3.jpg" alt="adaptive_icons" width="300" />
 </div>  
 
 ## Screenshots
@@ -70,4 +70,4 @@ These patches are fully FOSS. You can use, study, share and modify it at your wi
 
 ---
 ### Info:
-These patches are only for educational purpose and personal usages. They are safe and don't tamper with any application functionality in a negative way, neither they are capable of it. We are not affiliated with Revanced Project. Some patches and parts are taken from Crimera and TheRealSwak, So many thanks to them and do star their Repo. 
+These patches are only for educational purpose and personal usages. They are safe and don't tamper with any application functionality in a negative way, neither they are capable of it. We are not affiliated with Revanced Project. This Repo also contains patches and parts from the Crimera piko and TheRealSwak, So many thanks to them and do star their awesome Repo. 
