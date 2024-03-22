@@ -1,3 +1,10 @@
+# [1.12.0-dev.3](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.2...v1.12.0-dev.3) (2024-03-22)
+
+
+### Bug Fixes
+
+* **twitter:** fix monochrome ([4d6622a](https://github.com/IndusAryan/twitter-patches/commit/4d6622a29d18da3fdbcc0412310ca141b738bc40))
+
 # [1.12.0-dev.2](https://github.com/IndusAryan/twitter-patches/compare/v1.12.0-dev.1...v1.12.0-dev.2) (2024-03-22)
 
 
