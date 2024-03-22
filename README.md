@@ -24,11 +24,13 @@ To use these patches, follow the steps below:
 2. Set `twitter-patches` as the source for your patches.
 
 <div style="display:flex; justify-content:space-between;">  
-<img src="screenshots/raw1.jpg" alt="usage" width="200" />  
+<img src="screenshots/raw1.png" alt="usage" width="200" />  
 </div>  
 
-## Warning:
-Only use 1 icon patch and deselect other two otherwise; last applied patch will be used.
+## Warnings:
+Only use 1 icon patch and deselect other two otherwise; last applied patch icon will be used.
+All icon sets contain adaptive monochrome icon.
+Use crimera integrations as seen in image due to implementation of Mod menu.
 
 ## Icons
 <div style="display:flex; justify-content:space-between;">  
