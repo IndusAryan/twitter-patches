@@ -181,16 +181,16 @@ class XMLUtils(context: ResourceContext) {
     private fun updateXmlFile(xmlFile: File) {
         if (!Files.isRegularFile(xmlFile.toPath())) throw PatchException("$xmlFile not found.")
 
-        val content = xmlFile.readText()
-        val modifiedContent = content.replaceFirst(
-            """<foreground\s+android:drawable="[^"]+"""",
-            """<foreground android:drawable="@drawable/avatar_marker_twitter""""
-        ).replaceFirst(
-            """<monochrome\s+android:drawable="[^"]+"""",
-            """<monochrome android:drawable="@drawable/ic_vector_twitter_circle_fill""""
-        )
+        val newMipmap = """
+            <?xml version='1.0' encoding='utf-8' ?>
+            <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+              <background android:drawable="@color/ic_launcher_background" />
+              <foreground android:drawable="@drawable/avatar_marker_twitter" />
+              <monochrome android:drawable="@drawable/ic_vector_twitter_circle_fill" />
+            </adaptive-icon>
+        """.trimIndent()
 
-        xmlFile.writeText(modifiedContent)
+        xmlFile.writeText(newMipmap)
     }
 
     fun updateLauncherXmlFiles() {

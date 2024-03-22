@@ -9,19 +9,19 @@ import indus.org.patches.twitter.crimeraswak.misc.settings.SettingsPatch
 import indus.org.patches.twitter.crimeraswak.misc.settings.fingerprints.SettingsStatusLoadFingerprint
 
 @Patch(
-    name = "Remove Detailed posts",
-    description = "Removes detailed posts in replies",
-    dependencies = [SettingsPatch::class, TimelineEntryHookPatch::class],
+    name = "Remove \"Pinned posts by followers\" Banner",
+    dependencies = [SettingsPatch::class,TimelineEntryHookPatch::class],
     compatiblePackages = [CompatiblePackage("com.twitter.android")],
-    use = false
+    use = true
 )
-object HideDetailedPosts :BytecodePatch(
+@Suppress("UNUSED")
+object HidePinnedByFollowers :BytecodePatch(
     setOf()
 ){
     override fun execute(context: BytecodeContext) {
         SettingsStatusLoadFingerprint.result!!.mutableMethod.addInstruction(
             0,
-            "${SettingsPatch.SSTS_DESCRIPTOR}->hideDetailedPost()V"
+            "${SettingsPatch.SSTS_DESCRIPTOR}->hideRevistPinnedPost()V"
         )
 
     }

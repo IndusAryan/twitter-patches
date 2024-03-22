@@ -16,6 +16,7 @@ import indus.org.patches.twitter.crimeraswak.misc.viewcount.fingerprints.RemoveV
     name = "Remove view count",
     description = "Removes the view count from the bottom of tweets",
     compatiblePackages = [CompatiblePackage("com.twitter.android")],
+    use = false
 )
 @Suppress("unused")
 object RemoveViewCountPatch: BytecodePatch(
