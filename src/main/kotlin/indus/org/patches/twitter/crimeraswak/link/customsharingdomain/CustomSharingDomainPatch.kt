@@ -9,7 +9,7 @@ import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import crimera.patches.twitter.link.customsharingdomain.fingerprints.CustomSharingDomainFingerprint
+import indus.org.patches.twitter.crimeraswak.link.customsharingdomain.fingerprints.CustomSharingDomainFingerprint
 import indus.org.patches.twitter.crimeraswak.misc.settings.SettingsPatch
 import indus.org.patches.twitter.crimeraswak.misc.settings.fingerprints.SettingsStatusLoadFingerprint
 

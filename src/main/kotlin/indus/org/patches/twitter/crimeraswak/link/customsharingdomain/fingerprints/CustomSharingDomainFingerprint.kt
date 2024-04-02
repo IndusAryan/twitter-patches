@@ -1,4 +1,4 @@
-package crimera.patches.twitter.link.customsharingdomain.fingerprints
+package indus.org.patches.twitter.crimeraswak.link.customsharingdomain.fingerprints
 
 import app.revanced.patcher.extensions.or
 import app.revanced.patcher.fingerprint.MethodFingerprint
