@@ -22,6 +22,7 @@ To use these patches, follow the steps below:
 
 1. Make `IndusAryan` the organization for your Revanced app.
 2. Set `twitter-patches` as the source for your patches.
+3. Use `crimera` as integration organization due to implementation of Mod menu.
 
 <div style="display:flex; justify-content:space-between;">  
 <img src="screenshots/raw1.png" alt="usage" width="200" />  

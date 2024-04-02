@@ -1,8 +1,7 @@
-package crimera.patches.twitter.premium.undoposts
+package indus.org.patches.twitter.crimeraswak.premium.undoposts
 
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
-import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.getInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstructions
@@ -11,10 +10,9 @@ import app.revanced.patcher.patch.PatchException
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import com.android.tools.smali.dexlib2.Opcode
-import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
-import crimera.patches.twitter.premium.undoposts.fingerprints.UndoPost1Fingerprint
-import crimera.patches.twitter.premium.undoposts.fingerprints.UndoPost2Fingerprint
-import crimera.patches.twitter.premium.undoposts.fingerprints.UndoPost3Fingerprint
+import indus.org.patches.twitter.crimeraswak.premium.undoposts.fingerprints.UndoPost1Fingerprint
+import indus.org.patches.twitter.crimeraswak.premium.undoposts.fingerprints.UndoPost2Fingerprint
+import indus.org.patches.twitter.crimeraswak.premium.undoposts.fingerprints.UndoPost3Fingerprint
 
 @Patch(
     name = "Enable Undo Posts",
@@ -23,7 +21,7 @@ import crimera.patches.twitter.premium.undoposts.fingerprints.UndoPost3Fingerpri
     use = false
 )
 object EnableUndoPostPatch :BytecodePatch(
-    setOf(UndoPost1Fingerprint,UndoPost2Fingerprint,UndoPost3Fingerprint)
+    setOf(UndoPost1Fingerprint, UndoPost2Fingerprint, UndoPost3Fingerprint)
 ){
     override fun execute(context: BytecodeContext) {
 
