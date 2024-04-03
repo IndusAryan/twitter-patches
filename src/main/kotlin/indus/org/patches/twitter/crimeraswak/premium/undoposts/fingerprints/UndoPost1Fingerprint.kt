@@ -1,4 +1,4 @@
-package crimera.patches.twitter.premium.undoposts.fingerprints
+package indus.org.patches.twitter.crimeraswak.premium.undoposts.fingerprints
 
 import app.revanced.patcher.fingerprint.MethodFingerprint
 import com.android.tools.smali.dexlib2.Opcode
