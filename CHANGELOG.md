@@ -1,3 +1,10 @@
+# [1.14.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.13.0...v1.14.0-dev.1) (2024-04-12)
+
+
+### Features
+
+* **twitter:** end of the line ([1e29fad](https://github.com/IndusAryan/twitter-patches/commit/1e29fad2ce8487c1dd9304bf4f905b7d18cfc236))
+
 # [1.14.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.13.0...v1.14.0-dev.1) (2024-04-02)
 
 

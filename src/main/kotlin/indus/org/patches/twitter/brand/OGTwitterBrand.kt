@@ -89,9 +89,27 @@ object OGTwitterBrand : ResourcePatch() {
                 "tweets_retweeted" to "%s retweeted",
                 "tweets_undo_retweet_vertical" to "Undo retweet",
                 "users_turn_on_retweets" to "Turn on retweets",
-                "ps__post_broadcast_twitter" to "Post on Twitter",
+                "ps__post_broadcast_twitter" to "Tweet on Twitter",
                 "ps__retweet_broadcast_action" to "Retweet on Twitter",
-                "retweeters_title" to "Retweeted by"
+                "retweeters_title" to "Retweeted by",
+                "icon_view_tweet_activity" to "View tweet activity",
+                "a11y_views_text" to "View tweet activity",
+                "tweet_analytics_title" to "Tweet activity",
+                "tweets_delete_title" to "Delete tweet",
+                "share_tweet_sheet_title" to "Share tweet",
+                "view_quote_tweet" to "View tweet",
+                "view_tweet" to "View tweet",
+                "view_tweet_text" to "View tweet",
+                "quote_label_subtitle" to "Add a comment, photo, or GIF before you share this tweet",
+                "retweet_label_subtitle" to "Share this tweet with your followers",
+                "tweet_added_to_your_bookmarks" to "Tweet added to your Bookmarks",
+                "tweet_author" to "Tweet author",
+                "tweets_retweeted_accessibility_description" to "Tweeted by %s",
+                "tweets_topic_accessibility_description" to "Tweet from topic %s",
+                "tweets_unauthorized_error" to "Sorry, you’re not authorized to view these tweets.",
+                "ps__posted_on_twitter" to "*%s* tweeted on",
+                "ps__retweeted_on_twitter" to "*%s* retweeted on",
+                "tweet_removed_from_your_bookmarks" to "Tweet removed from your Bookmarks"
             )
 
             for ((key, value) in replacementMap) {

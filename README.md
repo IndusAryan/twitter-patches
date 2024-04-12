@@ -13,19 +13,16 @@
 ⦿ Hide tweet View counts
 ⦿ Hide promoted users and AdBlock
 
--> from Crimera Piko
-⦿ All Patches and settings menu (RIP originality)
 ```
 ## Usage
 
 To use these patches, follow the steps below:
 
-1. Make `IndusAryan` the organization for your Revanced app.
-2. Set `twitter-patches` as the source for your patches.
-3. Use `crimera` as integration organization due to implementation of Mod menu.
+1. Make `IndusAryan` the patches-organization for your Revanced app.
+2. Set `twitter-patches` as the patches-source for your patches.
 
 <div style="display:flex; justify-content:space-between;">  
-<img src="screenshots/raw1.png" alt="usage" width="200" />  
+<img src="screenshots/altsource.jpg" alt="usage" width="200" />  
 </div>  
 
 ## Warnings:
@@ -73,4 +70,4 @@ These patches are fully FOSS. You can use, study, share and modify it at your wi
 
 ---
 ### Info:
-These patches are only for educational purpose and personal usages. They are safe and don't tamper with any application functionality in a negative way, neither they are capable of it. We are not affiliated with Revanced Project. This Repo also contains patches and parts from the Crimera piko and TheRealSwak, So many thanks to them and do star their awesome Repo. 
+These patches are only for educational purpose and personal usages. They are safe and don't tamper with any application functionality in a negative way, neither they are capable of it. We are not affiliated with Revanced Project. This Repo also parts from the Crimera piko and TheRealSwak, So many thanks to them and do star their awesome Repo. 
