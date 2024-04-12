@@ -4,6 +4,14 @@
 ### Features
 
 * **twitter:** end of the line ([1e29fad](https://github.com/IndusAryan/twitter-patches/commit/1e29fad2ce8487c1dd9304bf4f905b7d18cfc236))
+* **twitter:** publish release ([67f3fd3](https://github.com/IndusAryan/twitter-patches/commit/67f3fd33c7747579cd4b37d883e3f656c5614377))
+
+# [1.14.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.13.0...v1.14.0-dev.1) (2024-04-12)
+
+
+### Features
+
+* **twitter:** end of the line ([1e29fad](https://github.com/IndusAryan/twitter-patches/commit/1e29fad2ce8487c1dd9304bf4f905b7d18cfc236))
 
 # [1.14.0-dev.1](https://github.com/IndusAryan/twitter-patches/compare/v1.13.0...v1.14.0-dev.1) (2024-04-02)
 
