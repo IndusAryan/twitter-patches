@@ -14,7 +14,7 @@
 ⦿ Hide promoted users and AdBlock
 
 ```
-## Usage
+## Usage 
 
 To use these patches, follow the steps below:
 
