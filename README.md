@@ -1,3 +1,5 @@
+## ⚠️ NOTE : This repo has been archived and development is being continued in [Piko-Patches](https://github.com/crimera/piko). All IndusAryan patches like Material Dessign, branding, etc are merged into Piko as well, Thanks everyone for starring and using this.
+
 ## Patches for twitter:
 
 ```kotlin
